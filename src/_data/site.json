@@ -1,0 +1,11 @@
+{
+   "url": "https://site.com",
+   "favicon": "/assets/favicon.ico",
+   "favicon-svg": "/assets/icon.svg",
+   "logo": "/assets/logo.svg",
+   "langs": ["en", "es"],
+   "affiliate_links": {
+      "linkEN": "https://www.google.com",
+      "linkES": "https://www.google.com"
+   }
+}

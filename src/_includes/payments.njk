@@ -1,0 +1,54 @@
+{% set paymentsDataPath = "src/" ~ page.lang ~ "/data/payments.json" %}
+{% set paymentMethods = readJSON(paymentsDataPath) %}
+
+<div id="payments" class="pt-32">
+   {% set title = payments.title %}
+   {% set description = payments.description %}
+   {% include "sectionTitle.njk" %}
+   <div class="max-w-7xl mx-auto">
+      <div class="relative">
+        <div class="white-shade absolute pointer-events-none inset-y-0 -right-3 w-8 md:w-12 xl:hidden"></div>
+        <div class="overflow-x-auto -mx-2 sm:mx-0">
+          <table class="w-full border-separate border-spacing-1 sm:border-spacing-1 font-bold text-center text-table whitespace-nowrap">
+            <thead>
+              <tr>
+               <th></th>
+                {% for method in paymentMethods %}
+                  <th class="payment-cell p-1.5 sm:p-3 rounded-lg min-w-[80px] sm:min-w-[100px]">
+                    <img loading="lazy" src="{{ method.logo }}" alt="{{ method.name }} logo" class="h-5 sm:h-8 mx-auto pointer-events-none">
+                  </th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="payment-cell p-2 sm:p-1.5 rounded-lg w-[100px]">{{ payments.deposit_time }}</td>
+                {% for method in paymentMethods %}
+                  <td class="payment-cell p-2 sm:p-1.5 rounded-lg">
+                      {{ method.depositTime }}
+                  </td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <td class="payment-cell p-2 sm:p-1.5 rounded-lg w-[100px]">{{ payments.withdrawal_time }}</td>
+                {% for method in paymentMethods %}
+                  <td class="payment-cell p-2 sm:p-1.5 rounded-lg">
+                    {{ method.withdrawalDays }} {% if method.withdrawalDays == 1 %}{{ payments.day }}{% else %}{{ payments.days }}{% endif %}
+                  </td>
+                {% endfor %}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>
+
+<style>
+  .white-shade {
+    background: linear-gradient(to left, {{ colors.background }}, rgba(255, 255, 255, 0));
+  }
+   .payment-cell {
+      background-color: {{ colors.background_secondary }};
+   }
+</style>

@@ -1,0 +1,26 @@
+{
+   "background": "#F7F7F7",
+   "background_secondary": "#E5E5E5",
+   "accent": "#FF4800",
+   "accent_selection": "rgba(255, 72, 0, 0.7)",
+   "text": {
+      "primary": "#000000",
+      "secondary": "#333333",
+      "light": "#FFFFFF"
+   },
+   "shadow": "rgba(0, 0, 0, 0.1)",
+
+   "header": {
+      "background": "rgba(255, 255, 255, 0.8)",
+      "border": "rgba(255, 255, 255, 0.9)"
+   },
+   "cta": {
+      "background": "#FF4800",
+      "hover": "#B83400",
+      "text": "#FFFFFF",
+      "text_hover": "rgba(255, 255, 255, 0.9)"
+   },
+   "about": {
+      "gradient": "rgba(255, 72, 0, 0.85) 5%, rgba(85, 34, 17, 0.7) 40%, transparent 80%"
+   }
+}

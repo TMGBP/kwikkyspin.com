@@ -1,0 +1,50 @@
+{% set providersDataPath = "src/" ~ page.lang ~ "/data/providers.json" %}
+{% set providersData = readJSON(providersDataPath) %}
+
+<div class="relative px-16 md:px-20 lg:px-16">
+   <span class="{{ type }}-arrow prev absolute top-[35%] md:top-[40%] lg:top-[50%] lg:-translate-y-1/2 lg:-left-2">
+      <svg class="rotate-180 size-12 md:size-14 p-1 rounded-full transition-colors duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+   </span>
+   <span class="{{ type }}-arrow next absolute top-[35%] md:top-[40%] lg:top-[50%] lg:-translate-y-1/2 lg:-right-2">
+      <svg class="size-12 md:size-14 p-1 rounded-full transition-colors duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+   </span>
+
+   <div class="swiper {{ type }} py-4">
+      <div class="swiper-wrapper">
+         {% if type == "providers" %}
+            {% for item in providersData.list %}
+            <div class="swiper-slide">
+               <div class="provider rounded-2xl p-2 flex items-center justify-center h-[120px]">
+                  <a href="/{{page.lang}}/{{ item.url }}">
+                     <img class="pointer-events-none" src="{{ item.image }}" alt="{{ item.name }} logo">
+                  </a>
+               </div>
+            </div>
+            {% endfor %}
+         {% else %}
+            {% for item in games[type].list %}
+            <div class="swiper-slide">
+               <a href="/{{page.lang}}/{{ item.url }}" class="block game-link" data-game-type="{{ type }}" data-game-name="{{ item.name }}">
+                  <img class="bg-black rounded-xl w-full pointer-events-none" src="{{ item.image }}" alt="{{ item.alt }}">
+               </a>
+            </div>
+            {% endfor %}
+         {% endif %}
+      </div>
+   </div>
+</div>
+
+<style>
+   .provider {
+      background-color: {{ colors.background_secondary }};
+      box-shadow: 0 4px 12px 0 {{ colors.shadow }};
+   }
+   .prev svg, .next svg {
+      color: {{ colors.accent }};
+      border: 4px solid {{ colors.accent }};
+   }
+   .prev:hover svg, .next:hover svg {
+      color: {{ colors.text.light }};
+      background-color: {{ colors.accent }};
+   }
+</style>

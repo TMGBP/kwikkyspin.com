@@ -1,0 +1,67 @@
+{% set baseUrl = "/" %}
+{% if type == "support" %}
+   {% set baseUrl = "/pages/support" %}
+   <div class="support-buttons flex gap-4 lg:gap-8">
+      {% for lang in langs %}
+         {% if lang.support %}
+            <a href="/{{ lang.code }}{{ baseUrl }}" class="lang-option flex items-center gap-2 px-5 py-2 rounded-full border-4 border-accent {% if locale == lang.code %}selected{% endif %} transition-colors duration-300">
+            <img
+               loading="lazy"
+               class="lang-icon pointer-events-none size-6 lg:size-8 object-cover rounded-full border border-accent {% if locale == lang.code %}selected-border{% endif %} transition-colors duration-300"
+               src="{{ lang.flag }}"
+               alt="{{ lang.alt }}"
+            />
+            <p class="lang-text font-bold text-body-lg uppercase {% if locale == lang.code %}selected-text{% endif %} transition-colors duration-300">{{ lang.name }}</p>
+         </a>
+         {% endif %}
+      {% endfor %}
+   </div>
+{% else %}
+   <div class="lang-selector flex gap-4 lg:gap-8">
+      {% for lang in langs %}
+         {% if lang.locale %}
+            <a href="{% if lang.code == defaultLanguage %}/{% else %}/{{ lang.code }}{{ baseUrl }}{% endif %}" class="lang-option flex items-center gap-2 px-5 py-2 rounded-full border-4 border-accent {% if locale == lang.code %}selected{% endif %} transition-colors duration-300">
+            <img
+               loading="lazy"
+               class="lang-icon pointer-events-none size-6 lg:size-8 object-cover rounded-full border border-accent {% if locale == lang.code %}selected-border{% endif %} transition-colors duration-300"
+               src="{{ lang.flag }}"
+               alt="{{ lang.alt }}"
+            />
+            <p class="lang-text font-bold text-body-lg uppercase {% if locale == lang.code %}selected-text{% endif %} transition-colors duration-300">{{ lang.name }}</p>
+         </a>
+         {% endif %}
+      {% endfor %}
+   </div>
+{% endif %}
+
+<style>
+   .lang-selector {
+      color: {{ colors.text.primary }};
+   }
+   .lang-option {
+      border-color: {{ colors.accent }};
+   }
+   .lang-option:hover {
+      background-color: {{ colors.accent }};
+      color: {{ colors.text.light }};
+   }
+   .lang-option:hover .lang-text {
+      color: {{ colors.text.light }};
+   }
+   .lang-option.selected {
+      background-color: {{ colors.accent }};
+      color: {{ colors.text.light }};
+   }
+   .lang-icon {
+      border-color: {{ colors.accent }};
+   }
+   .lang-icon.selected-border {
+      border-color: white;
+   }
+   .lang-text {
+      color: {{ colors.accent }};
+   }
+   .lang-text.selected-text {
+      color: white;
+   }
+</style>

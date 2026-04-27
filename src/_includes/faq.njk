@@ -1,0 +1,103 @@
+<div id="faq" class="pt-32">
+   {% set title = faq.title %}
+   {% set description = faq.description %}
+   {% include "sectionTitle.njk" %}
+   <div class="flex flex-col md:flex-row gap-4">
+      <div class="w-full md:w-1/2 space-y-4">
+         {% for item in faq.faqs %}
+            {% if loop.index0 < (faq.faqs | length / 2) %}
+            <div class="faq-item rounded-xl transition-transform duration-300 cursor-pointer">
+               <div
+                  class="faq-head rounded-xl w-full relative z-20 flex justify-between items-center p-6 text-left gap-2"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="faq-content-{{ loop.index }}"
+                  onclick="toggleFaq({{ loop.index }})"
+               >
+                  <h3 class="faq-question font-bold">{{ item.question }}</h3>
+                  <svg
+                     class="faq-icon size-8 min-h-8 min-w-8 rounded-full border-2 p-0.5 transform transition-all duration-300"
+                     id="faq-icon-{{ loop.index }}"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24"
+                  >
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+               </div>
+               <div
+                  id="faq-content-{{ loop.index }}"
+                  class="faq-content rounded-b-lg -translate-y-2.5 overflow-hidden transition-[height] duration-300 ease-in-out"
+                  style="height: 0"
+                  role="region"
+               >
+                  <div class="p-5 pt-6 cursor-auto">
+                     <p class="text-body">{{ item.answer }}</p>
+                  </div>
+               </div>
+            </div>
+            {% endif %}
+         {% endfor %}
+      </div>
+      <div class="w-full md:w-1/2 space-y-4">
+         {% for item in faq.faqs %}
+            {% if loop.index0 >= (faq.faqs | length / 2) %}
+            <div class="faq-item rounded-xl transition-transform duration-300 cursor-pointer">
+               <div
+                  class="faq-head rounded-xl w-full relative z-20 flex justify-between items-center p-6 text-left gap-2"
+                  role="button"
+                  tabindex="0"
+                  aria-expanded="false"
+                  aria-controls="faq-content-{{ loop.index }}"
+                  onclick="toggleFaq({{ loop.index }})"
+               >
+                  <h3 class="faq-question font-bold">{{ item.question }}</h3>
+                  <svg
+                     class="faq-icon size-8 min-h-8 min-w-8 rounded-full border-2 p-0.5 transform transition-all duration-300"
+                     id="faq-icon-{{ loop.index }}"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24"
+                  >
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+               </div>
+               <div
+                  id="faq-content-{{ loop.index }}"
+                  class="faq-content rounded-b-lg -translate-y-2.5 overflow-hidden transition-[height] duration-300 ease-in-out"
+                  style="height: 0"
+                  role="region"
+               >
+                  <div class="p-5 pt-6 cursor-auto">
+                     <p class="text-body">{{ item.answer }}</p>
+                  </div>
+               </div>
+            </div>
+            {% endif %}
+         {% endfor %}
+      </div>
+   </div>
+</div>
+
+
+<style>
+   .faq-item {
+      background-color: {{ colors.background }};
+   }
+   .faq-head {
+      background-color: {{ colors.background }};
+      box-shadow: 0 2px 8px 0 {{ colors.shadow }};
+   }
+   .faq-content {
+      background-color: {{ colors.background_secondary }};
+   }
+   .faq-head:hover .faq-icon {
+      background-color: {{ colors.accent }};
+      color: {{ colors.text.light }};
+   }
+   .faq-icon {
+      border-color: {{ colors.accent }};
+      color: {{ colors.accent }};
+   }
+</style>

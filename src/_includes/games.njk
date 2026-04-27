@@ -1,0 +1,22 @@
+<div id="games" class="-space-y-6 md:-space-y-14">
+   <div class="pt-24 md:pt-32" id="slots">
+      {% set title = games.slot.title %}
+      {% set description = games.slot.description %}
+      {% include "sectionTitle.njk" %}
+   
+      {% set type = "slot" %}
+      {% include "carousel.njk" %}
+   </div>
+   <div class="pt-24 md:pt-32 pb-12 md:pb-24" id="live-dealer">
+      {% set title = games["live-dealer"].title %}
+      {% set description = games["live-dealer"].description %}
+      {% include "sectionTitle.njk" %}
+
+      {% set type = "live-dealer" %}
+      {% include "carousel.njk" %}
+   </div>
+
+   {% set text = games.cta %}
+   {% set link_path = 'explore-all-games' %}
+   <div class="flex justify-center">{% include "cta-mini.njk" %}</div>
+</div>

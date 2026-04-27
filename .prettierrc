@@ -1,0 +1,16 @@
+{
+   "arrowParens": "avoid",
+   "jsxSingleQuote": true,
+   "tabWidth": 3,
+   "semi": false,
+   "singleQuote": false,
+   "printWidth": 150,
+   "overrides": [
+      {
+         "files": "*.njk",
+         "options": {
+            "parser": "html"
+         }
+      }
+   ]
+}

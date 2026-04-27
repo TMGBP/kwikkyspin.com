@@ -1,0 +1,56 @@
+[
+   {
+      "name": "PayPal",
+      "logo": "/assets/paypal.svg",
+      "depositTime": "Al instante",
+      "withdrawalDays": 3
+   },
+   {
+      "name": "Visa",
+      "logo": "/assets/visa.svg",
+      "depositTime": "Al instante",
+      "withdrawalDays": 3
+   },
+   {
+      "name": "Apple Pay",
+      "logo": "/assets/applepay.svg",
+      "depositTime": "Al instante",
+      "withdrawalDays": 3
+   },
+   {
+      "name": "Google Pay",
+      "logo": "/assets/googlepay.svg",
+      "depositTime": "Al instante",
+      "withdrawalDays": 3
+   },
+   {
+      "name": "NETELLER",
+      "logo": "/assets/neteller.svg",
+      "depositTime": "Al instante",
+      "withdrawalDays": 3
+   },
+   {
+      "name": "Mastercard",
+      "logo": "/assets/mc.svg",
+      "depositTime": "Al instante",
+      "withdrawalDays": 3
+   },
+   {
+      "name": "Klarna",
+      "logo": "/assets/klarna.svg",
+      "depositTime": "Al instante",
+      "withdrawalDays": 3
+   },
+   {
+      "name": "Bizum",
+      "logo": "/assets/bizum.svg",
+      "depositTime": "Al instante",
+      "withdrawalDays": 3
+   },
+   {
+      "name": "Paysafecard",
+      "logo": "/assets/paysafecard.svg",
+      "depositTime": "Al instante",
+      "withdrawalDays": 3
+   }
+]

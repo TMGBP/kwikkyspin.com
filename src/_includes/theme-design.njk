@@ -1,0 +1,25 @@
+<div class="pt-32">
+   {% set title = theme_design.title %}
+   {% set description = theme_design.description %}
+   {% include "sectionTitle.njk" %}
+   <div class="flex flex-col justify-around items-center gap-16 lg:flex-row">
+      <div class="flex flex-col items-center gap-4 lg:gap-8">
+         <span class="font-2 font-bold text-body-lg">Mobile</span>
+         <div class="relative">
+            <div class="absolute inset-0 -z-10 m-3 p-1.5 rounded-2xl">
+               <img class="bg-cover h-full absolute inset-0 -z-10 rounded-2xl" loading="lazy" src="{{ theme_design.images.mobile }}" alt="Mobile app UI">
+            </div>
+            <img loading="lazy" class="pointer-events-none" src="../assets/mobile.webp" alt="Mobile frame">
+         </div>
+      </div>
+      <div class="flex flex-col items-center gap-4 lg:gap-8">
+         <span class="font-2 font-bold text-body-lg">Desktop</span>
+         <div class="relative w-[350px] md:w-auto">
+            <div class="absolute inset-0 -z-10 my-6 mx-8 md:mt-10 md:mx-14 lg:mt-10 p-1.5 rounded-xl">
+               <img class="bg-cover h-full absolute inset-0 -z-10 rounded-xl rounded-b-none" loading="lazy" src="{{ theme_design.images.desktop }}" alt="Desktop app UI">
+            </div>
+            <img loading="lazy" class="pointer-events-none" src="../assets/laptop.webp" alt="Laptop frame">
+         </div>
+      </div>
+   </div>
+</div>

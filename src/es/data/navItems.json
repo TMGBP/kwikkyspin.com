@@ -1,0 +1,32 @@
+[
+   {
+      "label": "Juegos",
+      "slug": "games",
+      "type": "games"
+   },
+   {
+      "label": "Sobre Nosotros",
+      "slug": "about",
+      "type": "about"
+   },
+   {
+      "label": "Ofertas",
+      "slug": "offers",
+      "type": "offers"
+   },
+   {
+      "label": "Pagos",
+      "slug": "payments",
+      "type": "payments"
+   },
+   {
+      "label": "FAQ",
+      "slug": "faq",
+      "type": "faq"
+   },
+   {
+      "label": "Soporte",
+      "slug": "support",
+      "type": "support"
+   }
+]

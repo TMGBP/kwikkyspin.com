@@ -1,0 +1,59 @@
+{% set navItemsPath = "src/" ~ page.lang ~ "/data/navItems.json" %}
+{% set navItems = readJSON(navItemsPath) %}
+{% set isHomePage = page.url == "/" or page.url == "/en/" %}
+
+<header class="header sticky top-0 z-50 backdrop-blur-md">
+    <div class="container mx-auto flex justify-between items-center gap-3 py-1 px-4">
+        <a href="/{{page.lang}}/"><img class="max-w-[200px] h-[76px] py-1 relative z-10" src="{{ site.logo }}" alt="{{ title }}"></a>
+        <nav>
+            <ul class="gap-6 lg:gap-8 font-1 font-semibold mobile-menu--closed">
+                {% for item in navItems %}
+                <li class="nav-item text-nav transition-colors duration-300">
+                    {% if isHomePage %}
+                    <a href="#{{ item.slug }}">{{ item.label }}</a>
+                    {% else %}
+                    <a href="/{{ page.lang }}/#{{ item.slug }}">{{ item.label }}</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+                <li class="xl:hidden mt-3">
+                    {% set text = join %}
+                    {% set link_path = 'claim-bonus' %}
+                    {% include "cta-mini.njk" %}
+                </li>
+            </ul>
+        </nav>
+        <div class="hidden xl:block">
+            {% set text = nav_cta %}
+            {% include "cta-hero.njk" %}
+        </div>
+        <button class="xl:hidden size-11 relative z-10" aria-label="Menu">
+            <svg class="menu-open-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg class="menu-close-icon hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18"></path><path d="m6 6 12 12"></path>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<style>
+    .header {
+        background-color: {{ colors.header.background }};
+        border-color: {{ colors.header.border }};
+        box-shadow: 0 4px 12px 0 {{ colors.shadow }};
+    }
+    .nav-item:hover {
+        color: {{ colors.accent }};
+    }
+    .menu-open-icon {
+        color: {{ colors.accent }};
+    }
+    .menu-close-icon {
+        color: {{ colors.accent }};
+    }
+    .mobile-menu--open {
+        background-color: {{ colors.background }};
+    }
+</style>

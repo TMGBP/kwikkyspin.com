@@ -1,0 +1,21 @@
+{
+   "name": "cage-template-1-games-v1.3",
+   "version": "1.0.0",
+   "main": ".eleventy.js",
+   "scripts": {
+      "css": "tailwindcss -i ./src/assets/styles.css -o ./src/assets/output.css --watch",
+      "start": "eleventy --serve",
+      "dev": "npm-run-all --parallel css start",
+      "build": "eleventy"
+   },
+   "devDependencies": {
+      "@11ty/eleventy": "^2.0.0",
+      "@tailwindcss/typography": "^0.5.16",
+      "autoprefixer": "^10.4.0",
+      "luxon": "^3.5.0",
+      "npm-run-all": "^4.1.5",
+      "postcss": "^8.4.0",
+      "prettier": "^3.4.2",
+      "tailwindcss": "^3.0.0"
+   }
+}

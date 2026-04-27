@@ -1,0 +1,32 @@
+---
+layout: ""
+permalink: "{{locale}}/pages/support/index.html"
+---
+
+<!doctype html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title></title>
+      <meta name="robots" content="noindex" />
+      <script>
+         window.onload = function () {
+            const rawAffiliateUrl = "{{ site.affiliate_links.linkES | trim }}"
+            let affiliateUrl = rawAffiliateUrl
+            for (let i = 0; i < 5; i++) {
+               const decoded = affiliateUrl
+                  .replaceAll("&amp;", "&")
+                  .replaceAll("&#38;", "&")
+                  .replaceAll("&#x26;", "&")
+               if (decoded === affiliateUrl) {
+                  break
+               }
+               affiliateUrl = decoded
+            }
+            window.location.replace(affiliateUrl)
+         }
+      </script>
+   </head>
+   <body></body>
+</html>

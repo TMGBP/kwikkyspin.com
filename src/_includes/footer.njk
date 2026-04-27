@@ -1,0 +1,51 @@
+{% set protectionPath = "src/_data/footerProtection.json" %}
+{% set protection = readJSON(protectionPath).items %}
+{% set footerItemsPath = "src/" ~ page.lang ~ "/data/footerItems.json" %}
+{% set footerItems = readJSON(footerItemsPath) %}
+
+<footer class="footer mt-32">
+   <div class="container mx-auto max-w-6xl pt-16 md:pt-[128px] pb-[80px] px-4">
+      <div class="footer-grid grid grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-[90px]">
+         <img loading="lazy" class="footer-logo w-[214px] col-span-2" src="{{ site.logo }}" alt="{{ title }}">
+         {% for section in footerItems.sections %}
+         <div class="footer-section flex flex-col items-start justify-start gap-4">
+            <h4 class="footer-section-title font-bold text-body-lg">{{ section.title }}</h4>
+            {% for link in section.links %}
+            {% set url = link.url | replace("{{locale}}", page.lang) %}
+               <a href="{{ url }}" class="footer-link text-body-lg font-semibold">{{ link.label }}</a>
+            {% endfor %}
+         </div>
+         {% endfor %}
+      </div>
+      <div class="flex flex-col lg:flex-row gap-8 lg:gap-0 items-center justify-between">
+         <div class="pt-[65px]">
+            <div class="max-w-md">
+               {% for item in protection %}
+                  {% if item.path.indexOf(page.lang + "-protection") > -1 %}
+                     <img class="protection-logo pointer-events-none" loading="lazy" src="{{ item.path }}" alt="protections logos">
+                  {% endif %}
+               {% endfor %}
+            </div>
+         </div>
+         {% include "lang-selector.njk" %}
+      </div>
+   </div>
+</footer>
+
+<style>
+   .footer {
+      background: linear-gradient(70deg, {{ footer.gradient }});
+   }
+   .footer-section-title {
+      color: {{ footer.text }};
+   }
+   .footer-link {
+      color: {{ footer.link }};
+   }
+   .footer-link:hover {
+      opacity: 1;
+   }
+   .footer-protection-logos img {
+      pointer-events: none;
+   }
+</style>

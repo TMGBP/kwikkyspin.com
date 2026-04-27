@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang or 'en' }}">
+<head>
+    {% include "head.njk" %}
+</head>
+<body>
+    {% if tracking.googleTagManager and tracking.googleTagManager.id %}
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ tracking.googleTagManager.id }}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    {% endif %}
+    {% set locale = page.lang or 'en' %}
+    {% include "navbar.njk" %}
+    <main class="container mx-auto max-w-5xl xl:max-w-7xl p-4 my-12 relative">
+        <article class="prose prose-content text-body mx-auto max-w-prose prose-img:rounded-xl prose-img:shadow-md">
+            {{ content | safe }}
+        </article>
+    </main>
+    {% include "footer.njk" %}
+    <script type="module" src="/assets/script.js"></script>
+    <style>
+        .prose-content * {
+            color: {{ colors.text.primary }};
+        }
+    </style>
+</body>
+</html> 

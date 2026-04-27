@@ -1,0 +1,15 @@
+<button class="cta-mini-button w-fit h-fit font-1 rounded-2xl transition-colors duration-300 shadow-[0_0_12px_0_rgba(0,0,0,25%)] {% if md_self_end %}md:self-end{% endif %}">
+    <a class="cta-mini-link block cta-mini-text font-bold py-3 px-8 lg:py-4 rounded-2xl" href="/{{page.lang}}/pages/{{ link_path }}">{{ text }}</a>
+</button>
+
+<style>
+    .cta-mini-button {
+        background-color: {{ colors.cta.background }};
+        color: {{ colors.cta.text }};
+    }
+
+    .cta-mini-button:hover {
+        background-color: {{ colors.cta.hover }};
+        color: {{ colors.cta.text_hover }};
+    }
+</style>

@@ -1,0 +1,32 @@
+[
+   {
+      "label": "Games",
+      "slug": "games",
+      "type": "games"
+   },
+   {
+      "label": "About",
+      "slug": "about",
+      "type": "about"
+   },
+   {
+      "label": "Offers",
+      "slug": "offers",
+      "type": "offers"
+   },
+   {
+      "label": "Payments",
+      "slug": "payments",
+      "type": "payments"
+   },
+   {
+      "label": "FAQ",
+      "slug": "faq",
+      "type": "faq"
+   },
+   {
+      "label": "Support",
+      "slug": "support",
+      "type": "support"
+   }
+]

@@ -1,0 +1,35 @@
+<div class="relative mt-5">
+   <img
+      class="rounded-xl lg:rounded-[32px] w-full h-[320px] md:h-[340px] lg:h-[500px] object-cover object-right pointer-events-none"
+      src="{{ hero.image }}"
+      alt="{{ hero.image_alt }}"
+   />
+   <div class="font-2 relative md:absolute md:top-5 md:left-6 lg:top-10 lg:left-12 z-10 mt-5 md:mt-0">
+      <span class="hero-price text-[50px] lg:text-[90px] font-extrabold">{{ hero.price }}</span>
+      <p class="hero-text max-w-3xl mb-4 tracking-[-2%] leading-[54px] lg:leading-[90px] uppercase text-[32px] md:text-[36px] lg:text-[60px] font-extrabold md:drop-shadow-md">
+         {% for part in hero.text %}
+            {% if loop.index0 == 1 %}
+               <br />
+               <span class="hero-price">{{ part }}</span>
+            {% else %}
+               {{ part }}
+            {% endif %}
+         {% endfor %}
+      </p>
+      {% include "cta-hero.njk" %}
+   </div>
+</div>
+
+<style>
+   .hero-price {
+      color: {{ colors.accent }};
+   }
+   .hero-text {      
+      color: {{ colors.text.primary }};
+   }
+   @media (min-width: 768px) {
+      .hero-text {
+         color: {{ colors.text.light }};
+      }
+   }
+</style>

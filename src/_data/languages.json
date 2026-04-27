@@ -1,0 +1,157 @@
+{
+   "languages": [
+      {
+         "code": "en",
+         "name": "English",
+         "flag": "/assets/english-flag.svg",
+         "alt": "🇬🇧",
+         "support": true,
+         "locale": true
+      },
+      {
+         "code": "es",
+         "name": "Spanish",
+         "flag": "/assets/spain-flag.svg",
+         "alt": "🇪🇸",
+         "support": true,
+         "locale": true
+      },
+      {
+         "code": "fr",
+         "name": "French",
+         "flag": "/assets/france-flag.svg",
+         "alt": "🇫🇷",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "de",
+         "name": "German",
+         "flag": "/assets/germany-flag.svg",
+         "alt": "🇩🇪",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "it",
+         "name": "Italian",
+         "flag": "/assets/italy-flag.svg",
+         "alt": "🇮🇹",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "pt",
+         "name": "Portuguese",
+         "flag": "/assets/portugal-flag.svg",
+         "alt": "🇵🇹",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "ru",
+         "name": "Russian",
+         "flag": "/assets/russia-flag.svg",
+         "alt": "🇷🇺",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "ja",
+         "name": "Japanese",
+         "flag": "/assets/japan-flag.svg",
+         "alt": "🇯🇵",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "ko",
+         "name": "Korean",
+         "flag": "/assets/korea-flag.svg",
+         "alt": "🇰🇷",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "zh",
+         "name": "Chinese",
+         "flag": "/assets/china-flag.svg",
+         "alt": "🇨🇳",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "nl",
+         "name": "Dutch",
+         "flag": "/assets/netherlands-flag.svg",
+         "alt": "🇳🇱",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "sv",
+         "name": "Swedish",
+         "flag": "/assets/sweden-flag.svg",
+         "alt": "🇸🇪",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "no",
+         "name": "Norwegian",
+         "flag": "/assets/norway-flag.svg",
+         "alt": "🇳🇴",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "da",
+         "name": "Danish",
+         "flag": "/assets/denmark-flag.svg",
+         "alt": "🇩🇰",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "fi",
+         "name": "Finnish",
+         "flag": "/assets/finland-flag.svg",
+         "alt": "🇫🇮",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "pl",
+         "name": "Polish",
+         "flag": "/assets/poland-flag.svg",
+         "alt": "🇵🇱",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "tr",
+         "name": "Turkish",
+         "flag": "/assets/turkey-flag.svg",
+         "alt": "🇹🇷",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "hu",
+         "name": "Hungarian",
+         "flag": "/assets/hungary-flag.svg",
+         "alt": "🇭🇺",
+         "support": false,
+         "locale": false
+      },
+      {
+         "code": "cs",
+         "name": "Czech",
+         "flag": "/assets/czech-republic-flag.svg",
+         "alt": "🇨🇿",
+         "support": false,
+         "locale": false
+      }
+   ],
+   "defaultLanguage": "en"
+}

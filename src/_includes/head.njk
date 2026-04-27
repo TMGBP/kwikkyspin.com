@@ -1,0 +1,137 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{ title }}</title>
+<meta name="description" content="{{ meta_description }}" />
+<link rel="icon" href="{{ site.favicon }}" sizes="any" />
+<link rel="icon" href="{{ site['favicon-svg'] }}" type="image/svg+xml" />
+
+{% if tracking.googleTagManager and tracking.googleTagManager.id %}
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{{ tracking.googleTagManager.id }}');</script>
+<!-- End Google Tag Manager -->
+{% endif %}
+
+{% if tracking.googleAds and tracking.googleAds.id %}
+<!-- Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ tracking.googleAds.id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ tracking.googleAds.id }}');
+</script>
+<!-- End Google Ads -->
+{% endif %}
+
+{% if tracking.hotjar and tracking.hotjar.id %}
+<!-- Hotjar Tracking Code -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:{{ tracking.hotjar.id }},hjsv:{{ tracking.hotjar.version }}};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<!-- End Hotjar Tracking Code -->
+{% endif %}
+
+{% for font_url in fonts.font_urls %}
+<link rel="stylesheet" href="{{ font_url }}" />
+{% endfor %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.0.3/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/assets/output.css" />
+<meta name="robots" content="{% if robots == "disallow" %}noindex, nofollow{% else %}index, follow{% endif %}" />
+
+{% set hreflangsData = readJSON("src/_data/hreflangs.json") %}
+{% set defaultHreflang = hreflangsData.default %}
+{% set hreflangs = hreflangsData.languages %}
+
+<link rel="canonical" href="{{ site.url }}" />
+<link rel="alternate" hreflang="{{ defaultHreflang.lang }}" href="{{ defaultHreflang.url }}" data-rh="true" />
+{% for hreflang in hreflangs %}
+<link rel="alternate" hreflang="{{ hreflang.lang }}" href="{{ hreflang.url }}" data-rh="true" />
+{% endfor %}
+
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ site.description }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ page.url }}" />
+<meta property="og:image" content="{{ site.og_image }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ title }}" />
+<meta name="twitter:description" content="{{ site.description }}" />
+<meta name="twitter:image" content="{{ site.twitter_image }}" />
+<meta name="date" content="{{ getCurrentDate() }}" scheme="YYYY-MM-DD" />
+<meta name="last-modified" content="{{ getLastModifiedDate(page.inputPath) }}" scheme="YYYY-MM-DD" />
+<meta itemprop="datePublished" content="{{ getCurrentDate() }}" />
+<meta itemprop="dateModified" content="{{ getLastModifiedDate(page.inputPath) }}" />
+<style>
+  body {
+    background-color: {{ colors.background }};
+    font-family: "{{ fonts.font_families[0] }}", sans-serif;
+  }
+  *::selection {
+    background-color: {{ colors.accent_selection }};
+    color: {{ colors.text.light }};
+  }
+  
+  /* Font families */
+  .font-1 {
+    font-family: "{{ fonts.font_families[0] }}", sans-serif;
+  }
+  .font-2 {
+    font-family: "{{ fonts.font_families[1] }}", sans-serif;
+  }
+  
+  /* Text sizes */
+  .text-body {
+    font-size: {{ fonts.text_sizes.body }};
+    color: {{ colors.text.primary }};
+  }
+  .text-body-lg {
+    font-size: {{ fonts.text_sizes.bodyLg }};
+    color: {{ colors.text.primary }};
+  }
+  .text-table {
+    font-size: {{ fonts.text_sizes.tableCell }};
+    color: {{ colors.text.primary }};
+  }
+  .text-nav {
+    font-size: {{ fonts.text_sizes.navbarLinks }};
+    color: {{ colors.text.primary }};
+  }
+  .section-title-large {
+    font-size: {{ fonts.text_sizes.sectionTitleLarge }};
+    color: {{ colors.text.primary }};
+  }
+  .section-title-small {
+    font-size: {{ fonts.text_sizes.sectionTitleSmall }};
+    color: {{ colors.text.primary }};
+  }
+  .offers-deposit {
+    font-size: {{ fonts.text_sizes.offersDeposit }};
+  }
+  .offers-title {
+    font-size: {{ fonts.text_sizes.offersTitle }};
+  }
+  .about-heading {
+    font-size: {{ fonts.text_sizes.aboutHeading }};
+  }
+  .faq-question {
+    font-size: {{ fonts.text_sizes.faqQuestion }};
+    color: {{ colors.text.primary }};
+  }
+  .cta-text {
+    font-size: {{ fonts.text_sizes.ctaButton }};
+  }
+  .cta-mini-text {
+    font-size: {{ fonts.text_sizes.ctaMini }};
+  }
+</style>

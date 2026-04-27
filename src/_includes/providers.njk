@@ -1,0 +1,14 @@
+<div class="pt-32 relative">
+   <div class="mb-14">
+      {% set title = providers.title %}
+      {% set description = providers.description %}
+      {% include "sectionTitle.njk" %}
+   
+      {% set type = "providers" %}
+      {% include "carousel.njk" %}
+   </div>
+
+   {% set text = providers.cta %}
+   {% set link_path = 'learn-more' %}
+   <div class="flex justify-center">{% include "cta-mini.njk" %}</div>
+</div>

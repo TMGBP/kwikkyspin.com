@@ -1,0 +1,23 @@
+{
+   "font_urls": [
+      "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap",
+      "https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap"
+   ],
+   "font_families": ["Open Sans", "Poppins"],
+   "text_sizes": {
+      "body": "18px",
+      "bodyLg": "20px",
+      "tableCell": "16px",
+      "navbarLinks": "20px",
+      "sectionTitleLarge": "28px",
+      "sectionTitleSmall": "24px",
+      "offersDeposit": "20px",
+      "offersDepositSmall": "16px",
+      "offersTitle": "36px",
+      "offersTitleSmall": "18px",
+      "aboutHeading": "48px",
+      "faqQuestion": "20px",
+      "ctaButton": "20px",
+      "ctaMini": "20px"
+   }
+}

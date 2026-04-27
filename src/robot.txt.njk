@@ -1,0 +1,12 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+Sitemap: {{ site.url }}/sitemap.xml
+
+User-agent: *
+{%- for page in collections.all %}
+{%- if page.data.robots == "disallow"  %}
+Disallow: {{ page.url }}
+{%- endif %}
+{%- endfor %}

@@ -1,0 +1,44 @@
+<div id="support" class="pt-32">
+   {% set title = support.help_title %}
+   {% include "sectionTitle.njk" %}
+   <ul class="text-body list-disc list-inside">
+      {% for text in support.list %}
+         <li>{{ text }}</li>
+      {% endfor %}
+   </ul>
+   <div class="mt-16 flex lg:items-center flex-col lg:flex-row gap-8">
+      {% set title = support.langs_title %}
+      {% set removeMargin = true %}
+      {% include "sectionTitle.njk" %}
+
+      {% set type = "support" %}
+      {% include "lang-selector.njk" %}
+   </div>
+   <div class="mt-16">
+      {% set title = support.license_title %}
+      {% set removeMargin = false %}
+      {% include "sectionTitle.njk" %}
+      <p class="text-body">
+         {{ support.license_text }}
+      </p>
+   </div>
+   <div class="mt-16">
+      {% set title = support.gaming_title%}
+      {% set removeMargin = false %}
+      {% set variant = "small" %}
+      {% include "sectionTitle.njk" %}
+      <p class="text-body">
+         {{ support.gaming_text }}
+      </p>
+   </div>
+   <div class="mt-16 flex flex-col gap-16 md:flex-row items-center justify-center">
+      {% if support.gaming_icons %}
+         {% for icon in support.gaming_icons %}
+            <div class="flex flex-col items-center justify-center gap-4">
+               <img loading="lazy" src="{{ icon.image }}" alt="{{ icon.alt }}" class="size-[148px] pointer-events-none">
+               <p class="font-2 font-bold text-body-lg">{{ icon.title }}</p>
+            </div>
+         {% endfor %}
+      {% endif %}
+   </div>
+</div>

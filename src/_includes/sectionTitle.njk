@@ -1,0 +1,12 @@
+{% if variant === 'small' %}
+   <h3 class="font-2 font-medium section-title-small {% if removeMargin !== true %}mb-4{% endif %}">
+      {{ title }}
+   </h3>
+{% else %}
+   <h2 class="font-2 section-title-large font-semibold {% if removeMargin !== true %}mb-4{% endif %}">
+      {{ title }}
+   </h2>
+{% endif %}
+{% if description %}
+<p class="mb-8 lg:mb-12 text-body">{{ description }}</p>      
+{% endif %}

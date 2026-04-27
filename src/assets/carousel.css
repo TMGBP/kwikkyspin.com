@@ -1,0 +1,18 @@
+.carousel-arrow {
+   @apply absolute top-1/2 -translate-y-1/2 rounded-full size-12 cursor-pointer z-10 transition-colors duration-300;
+   color: var(--accent-color);
+   border: 4px solid var(--accent-color);
+}
+
+.carousel-arrow:hover {
+   background-color: var(--accent-color);
+   color: white;
+}
+
+.prev {
+   @apply left-0;
+}
+
+.next {
+   @apply right-0;
+}

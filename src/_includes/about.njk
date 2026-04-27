@@ -1,0 +1,51 @@
+<div id="about" class="pt-32">
+   {% set title = about.title %}
+   {% set description = about.description %} 
+   {% include "sectionTitle.njk" %}
+   <div class="relative overflow-hidden rounded-xl lg:rounded-[32px] p-4 lg:pr-20 lg:py-20">
+      <div class="relative z-20 flex flex-col md:flex-row gap-3 md:gap-8">
+         <img class="w-[160px] lg:w-[300px]" src="{{ site.logo }}" alt="{{ title }}">
+         <div class="md:flex flex-1 flex-col gap-2.5">
+            <h3 class="head-text font-2 font-bold about-heading"><span class="brand">{{ title }}</span> Casino</h3>
+            <div class="flex gap-1">
+               {% for i in range(0, 5) %}
+               <img src="../assets/star.svg" alt="⭐" class="size-5 md:size-7 pointer-events-none">
+               {% endfor %}
+            </div>
+            <ul class="text-balance space-y-0.5 list-disc pl-4 max-w-[250px] mb-3">
+               {% for benefit in about.benefits %}
+               <li class="benefits-text text-body font-semibold">{{ benefit }}</li>
+               {% endfor %}
+            </ul>
+         </div>
+         {% set text = about.bonus %}
+         {% set md_self_end = true %}
+         {% set link_path = 'claim-bonus' %}
+         {% include "cta-mini.njk" %}
+      </div>
+      <div class="card-gradient absolute z-10 inset-0"></div>
+      <img class="absolute inset-0 w-full h-full object-cover object-[90%] pointer-events-none" src="{{ about.image }}" alt="{{ about.image_alt }}">
+   </div>
+</div>
+
+<style>
+   .card-gradient {
+      background: linear-gradient(to top, {{ colors.about.gradient }});
+   }
+   
+   @media (min-width: 768px) {
+      .card-gradient {
+         background: linear-gradient(to right, {{ colors.about.gradient }});
+      }
+   }
+   
+   .head-text {
+      color: {{ colors.text.light }};
+   }
+   .brand {
+      color: {{ colors.accent }};
+   }
+   .benefits-text {
+      color: {{ colors.text.light }};
+   }
+</style>

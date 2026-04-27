@@ -1,0 +1,72 @@
+{
+   "sections": [
+      {
+         "title": "Fuego",
+         "links": [
+            {
+               "label": "Offers",
+               "url": "#offers"
+            },
+            {
+               "label": "Payments",
+               "url": "#payments"
+            },
+            {
+               "label": "Pricing",
+               "url": "#pricing"
+            }
+         ]
+      },
+      {
+         "title": "Games",
+         "links": [
+            {
+               "label": "Top Games",
+               "url": "#top-games"
+            },
+            {
+               "label": "New Games",
+               "url": "#new-games"
+            },
+            {
+               "label": "Slots",
+               "url": "#slots"
+            },
+            {
+               "label": "Live Dealer",
+               "url": "#live-dealer"
+            }
+         ]
+      },
+      {
+         "title": "Help",
+         "links": [
+            {
+               "label": "About Us",
+               "url": "#about"
+            },
+            {
+               "label": "Support",
+               "url": "/{{locale}}/pages/support"
+            },
+            {
+               "label": "Contact Us",
+               "url": "/{{locale}}/pages/contact-us"
+            }
+         ]
+      },
+      {
+         "title": "Legal",
+         "links": [
+            {
+               "label": "Privacy Policy",
+               "url": "#"
+            },
+            {
+               "label": "Terms of Service",
+               "url": "#"
+            }
+         ]
+      }
+   ]
+}
