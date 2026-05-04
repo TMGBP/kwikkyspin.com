@@ -13,8 +13,8 @@
          "name": "Spanish",
          "flag": "/assets/spain-flag.svg",
          "alt": "🇪🇸",
-         "support": true,
-         "locale": true
+         "support": false,
+         "locale": false
       },
       {
          "code": "fr",

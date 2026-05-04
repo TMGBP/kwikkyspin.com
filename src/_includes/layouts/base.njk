@@ -10,12 +10,16 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     {% endif %}
+
     {% set locale = page.lang or 'en' %}
-{% include "navbar.njk" %}
+
+    {% include "navbar.njk" %}
+
     <main class="container mx-auto max-w-5xl xl:max-w-6xl p-4 relative">
-        <h1 aria-label={{ title }} class="invisible absolute">
+        <h1 aria-label="{{ title }}" class="invisible absolute">
             {{ title }}
         </h1>
+
         {% include "hero.njk" %}
         {% include "games.njk" %}
         {% include "providers.njk" %}
@@ -25,10 +29,21 @@
         {% include "theme-design.njk" %}
         {% include "support.njk" %}
         {% include "faq.njk" %}
-        <div class="mt-12 text-body"><p>{{ content | safe }}</p></div>
+        {% include "review.njk" %}
+
+        {% if content | trim %}
+        <section class="mt-16 mb-16">
+            <div class="rounded-2xl bg-white p-6 md:p-10 shadow-lg text-body">
+                <div class="space-y-8 [&_h2]:text-2xl [&_h2]:md:text-3xl [&_h2]:font-bold [&_h2]:mb-3 [&_h3]:text-xl [&_h3]:md:text-2xl [&_h3]:font-bold [&_h3]:mb-3 [&_p]:leading-relaxed [&_p]:mb-3 [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:space-y-3 [&_li]:leading-relaxed [&_strong]:font-bold">
+                    {{ content | safe }}
+                </div>
+            </div>
+        </section>
+        {% endif %}
     </main>
+
     {% include "footer.njk" %}
+
     <script type="module" src="/assets/script.js"></script>
 </body>
 </html>
-

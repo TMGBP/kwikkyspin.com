@@ -1,0 +1,28 @@
+[[redirects]]
+  from = "/en/legend-of-cleopatra/"
+  to = ""
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/book-of-dead/"
+  to = ""
+  status = 301
+
+  [[redirects]]
+  from = "/en/money-cart-2/"
+  to = ""
+  status = 301
+
+[[redirects]]
+  from = "/en/big-bass-bonanza/"
+  to = ""
+  status = 301
+
+  [[redirects]]
+  from = "/en/sahara-riches-cash-collect-max/"
+  to = ""
+  status = 301
+
+
+

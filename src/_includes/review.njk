@@ -1,0 +1,142 @@
+{% if review %}
+<div id="review" class="review-section">
+   <div class="review-content">
+      {% for section in review.sections %}
+         <div class="review-block {% if not loop.last %}review-block-spacing{% endif %}">
+            {% if section.heading %}
+               {% if section.level == 2 %}
+                  <h2 class="review-heading review-heading-lg">{{ section.heading }}</h2>
+               {% else %}
+                  <h3 class="review-heading review-heading-md">{{ section.heading }}</h3>
+               {% endif %}
+            {% endif %}
+
+            {% if section.text %}
+               {% for paragraph in section.text %}
+                  <p class="review-text">{{ paragraph | safe }}</p>
+               {% endfor %}
+            {% endif %}
+
+            {% if section.list %}
+               <ol class="review-list">
+                  {% for item in section.list %}
+                     <li class="review-list-item">
+                        <strong>{{ item.title }}</strong><br>
+                        {{ item.text | safe }}
+                     </li>
+                  {% endfor %}
+               </ol>
+            {% endif %}
+         </div>
+      {% endfor %}
+   </div>
+</div>
+
+<style>
+   .review-section {
+      padding-top: 88px;
+      padding-bottom: 40px;
+   }
+
+   .review-content {
+      max-width: 880px;
+      margin-left: auto;
+      margin-right: auto;
+      color: {{ colors.text.dark }};
+   }
+
+   .review-block-spacing {
+      margin-bottom: 38px;
+   }
+
+   .review-heading {
+      color: {{ colors.text.dark }};
+      font-family: inherit;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.18;
+   }
+
+   .review-heading-md {
+      font-size: 30px;
+      margin-bottom: 22px;
+   }
+
+   .review-heading-lg {
+      font-size: 30px;
+      margin-bottom: 22px;
+   }
+
+   .review-text {
+      color: {{ colors.text.dark }};
+      font-size: 18px;
+      line-height: 1.45;
+      font-weight: 400;
+      margin-bottom: 24px;
+   }
+
+   .review-text:last-child {
+      margin-bottom: 0;
+   }
+
+   .review-list {
+      list-style-position: outside;
+      list-style-type: decimal;
+      padding-left: 24px;
+      margin-top: 0;
+      margin-bottom: 0;
+   }
+
+   .review-list-item {
+      color: {{ colors.text.dark }};
+      font-size: 18px;
+      line-height: 1.45;
+      font-weight: 400;
+      margin-bottom: 22px;
+   }
+
+   .review-list-item:last-child {
+      margin-bottom: 0;
+   }
+
+   .review-text strong,
+   .review-list-item strong {
+      color: {{ colors.text.dark }};
+      font-weight: 700;
+   }
+
+   @media (max-width: 1024px) {
+      .review-content {
+         max-width: 760px;
+      }
+   }
+
+   @media (max-width: 768px) {
+      .review-section {
+         padding-top: 56px;
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+
+      .review-content {
+         max-width: 100%;
+      }
+
+      .review-heading-md,
+      .review-heading-lg {
+         font-size: 26px;
+         margin-bottom: 16px;
+      }
+
+      .review-text,
+      .review-list-item {
+         font-size: 16px;
+         line-height: 1.55;
+      }
+
+      .review-block-spacing {
+         margin-bottom: 32px;
+      }
+   }
+</style>
+{% endif %}

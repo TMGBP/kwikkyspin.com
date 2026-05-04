@@ -1,11 +1,10 @@
 {
-   "url": "https://site.com",
-   "favicon": "/assets/favicon.ico",
-   "favicon-svg": "/assets/icon.svg",
-   "logo": "/assets/logo.svg",
-   "langs": ["en", "es"],
+   "url": "https://www.kwikkyspin.com/",
+   "favicon": "/assets/logo.png",
+   "favicon-svg": "/assets/logo.png",
+   "logo": "/assets/frontlogo.svg",
+   "langs": ["en"],
    "affiliate_links": {
-      "linkEN": "https://www.google.com",
-      "linkES": "https://www.google.com"
+      "linkEN": "https://record.babaffiliates.com/_aMOt-RH8u6PUOsjNOfgKeWNd7ZgqdRLk/1"
    }
 }

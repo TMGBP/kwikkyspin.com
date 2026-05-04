@@ -4,25 +4,109 @@
     {% include "head.njk" %}
 </head>
 <body>
+
     {% if tracking.googleTagManager and tracking.googleTagManager.id %}
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ tracking.googleTagManager.id }}"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id={{ tracking.googleTagManager.id }}"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
     {% endif %}
+
     {% set locale = page.lang or 'en' %}
+
     {% include "navbar.njk" %}
-    <main class="container mx-auto max-w-5xl xl:max-w-7xl p-4 my-12 relative">
+
+    <!-- ✅ SMALLER PAGE WIDTH -->
+    <main class="container mx-auto max-w-4xl p-4 my-12 relative">
+
+        <!-- ✅ TITLE -->
+        {% if title %}
+        <h1 class="game-page-title">
+            {{ title }}
+        </h1>
+        {% endif %}
+
+        <!-- ✅ DESCRIPTION -->
+        {% if description %}
+        <p class="game-description">
+            {{ description }}
+        </p>
+        {% endif %}
+
+        <!-- ✅ SMALLER GAME IFRAME -->
+        {% if iframeSrc %}
+        <div class="game-frame-wrapper">
+            <iframe 
+                src="{{ iframeSrc }}" 
+                class="game-frame"
+                allowfullscreen>
+            </iframe>
+        </div>
+        {% endif %}
+
+        <!-- ✅ PAGE CONTENT -->
         <article class="prose prose-content text-body mx-auto max-w-prose prose-img:rounded-xl prose-img:shadow-md">
             {{ content | safe }}
         </article>
+
     </main>
+
     {% include "footer.njk" %}
+
     <script type="module" src="/assets/script.js"></script>
+
+    <!-- 🔥 STYLING -->
     <style>
         .prose-content * {
             color: {{ colors.text.primary }};
         }
+
+        /* 🔥 TITLE */
+        .game-page-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        /* 🔥 DESCRIPTION */
+        .game-description {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 25px auto;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* 🔥 IFRAME WRAPPER (smaller) */
+        .game-frame-wrapper {
+            max-width: 750px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* 🔥 IFRAME (smaller height) */
+        .game-frame {
+            width: 100%;
+            height: 420px;
+            border-radius: 14px;
+            border: 2px solid #e5e5e5;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        /* 📱 MOBILE */
+        @media (max-width: 768px) {
+            .game-page-title {
+                font-size: 22px;
+            }
+
+            .game-frame {
+                height: 320px;
+            }
+        }
     </style>
+
 </body>
-</html> 
+</html>

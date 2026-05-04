@@ -1,7 +1,7 @@
 {
    "sections": [
       {
-         "title": "Fuego",
+         "title": "KwikkySpin",
          "links": [
             {
                "label": "Offers",
@@ -60,11 +60,15 @@
          "links": [
             {
                "label": "Privacy Policy",
-               "url": "#"
+               "url": "en/privacy-policy/"
             },
             {
                "label": "Terms of Service",
-               "url": "#"
+               "url": "en/terms-and-conditions/"
+            },
+            {
+               "label": "Responsible Gaming",
+               "url": "en/responsible-gaming/"
             }
          ]
       }
