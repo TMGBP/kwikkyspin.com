@@ -5,7 +5,7 @@ meta_description: "Play Gates of Olympus 1000 in free demo mode. See tumble wins
 permalink: "en/slots/gates-of-olympus-1000/"
 join: "Claim Bonus"
 nav_cta: "Sign Up"
-iframeSrc: https://s3.eu-central-1.amazonaws.com/ignition.button/round-3/index.html?fullscreen=false&options=eyJsYXVuY2hfb3B0aW9ucyI6eyJnYW1lX3VybCI6Imh0dHBzOi8vZGVtb2dhbWVzZnJlZS5vd3RmeGlwZGJpLm5ldC9nczJjL29wZW5HYW1lLmRvP2dhbWVTeW1ib2w9dnMyMGRvZ2hvdXNlXHUwMDI2bGFuZz1lblx1MDAyNmxvYmJ5VXJsPWh0dHBzOi8vd3d3Lmx1Y2t5Y2lyY3VzLmNvbS9leGl0X2lmcmFtZVx1MDAyNmNhc2hpZXJVcmw9aHR0cHM6Ly93d3cubHVja3ljaXJjdXMuY29tL2V4aXRfaWZyYW1lXHUwMDI2c3R5bGVuYW1lPXNmd3NfbHVja3ljaXJjdXNzd1x1MDAyNmp1cmlzZGljdGlvbj05OVx1MDAyNnRyZXE9SnJhZEkxOGxiSG5wT2hBVDJrUVJtV3o3SHZnM24xcmlibnQ4SWg0akNrVmlJaE1XeWRmVVRDdWV1WDdlNGJ1Tlx1MDAyNmlzR2FtZVVybEFwaUNhbGxlZD10cnVlXHUwMDI2dXNlcklkPWd1ZXN0Iiwic3RyYXRlZ3kiOiJpZnJhbWUifSwibG9iYnlfdG9rZW4iOiI0ZGNhMjhmNS0wNWFmLTRkMGUtOGZkNy00MzEwNzkyNmYyZTIiLCJsb2JieV91cmwiOiJodHRwczovL2lmcmFtZS5hOHIuZ2FtZXMvIn0%3D
+iframeSrc: https://demogamesfree.pragmaticplay.net/gs2c/html5Game.do?extGame=1&symbol=vs20olympx&gname=Gates%20of%20Olympus%201000&jurisdictionID=99&mgckey=stylename@generic~SESSION@0217a9c8-0bc8-435d-b2e6-ed18d1dd0920
 iframeStyle: "width:100%;height:720px;border:0;border-radius:12px;"
 description: "Gates of Olympus 1000 is a Greek mythology slot built around tumble wins, multiplier symbols and a Free Spins round. Instead of fixed paylines, matching symbols can pay from anywhere on the grid, while Zeus style multipliers can lift a quiet spin into something much stronger."
 slotInfo:

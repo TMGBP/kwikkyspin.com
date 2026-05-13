@@ -5,7 +5,7 @@ meta_description: "Try Elvis Frog in Vegas by BGaming in free demo mode. See how
 permalink: "en/slots/elvis-frog-in-vegas/"
 join: "Claim Bonus"
 nav_cta: "Sign Up"
-iframeSrc: https://s3.eu-central-1.amazonaws.com/ignition.button/round-2/index.html?fullscreen=false&options=eyJsYXVuY2hfb3B0aW9ucyI6eyJnYW1lX3VybCI6Imh0dHBzOi8vYmdhbWluZy1uZXR3b3JrLmNvbS9nYW1lcy9FbHZpc0Zyb2cvRVVSP2xhdW5jaF90b2tlbj1leUpoYkdjaU9pSklVekkxTmlKOS5leUprWVhSaElqcDdJbkIwWDJsa0lqb3hNakEyT1RBek16QXpmU3dpWlhod0lqb3hOemt6TnpneU5USTVmUS5JcHhmMWJKMHljakxIVGE5OVJpQklzc3NtNEthTVkxd183amF6bmsxV2NNXHUwMDI2c3RyYXRlZ3k9aWZyYW1lIiwic3RyYXRlZ3kiOiJpZnJhbWUifSwibG9iYnlfdG9rZW4iOiIyYzY3ZGZiOC0yNWMwLTQwMGEtYTRhNC0xMDE1ZTdkYTZkMDIiLCJsb2JieV91cmwiOiJodHRwczovL2lmcmFtZS5hOHIuZ2FtZXMvIn0%3D
+iframeSrc: https://demo.bgaming-network.com/games/ElvisFrog/FUN?launch_token=eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InB0X2lkIjoyODM2OTk2ODZ9LCJleHAiOjE3OTQ0MDQzMDl9.Am0tww2xuQ9dggSDDxIJ29Xm6NIHQmogCTXJdbVDt_c
 iframeStyle: "width:100%;height:720px;border:0;border-radius:12px;"
 description: "Elvis Frog in Vegas by BGaming is a 5×3 Las Vegas-themed slot with 25 fixed paylines. The game brings together Wilds, Free Spins, a Coin Respin/Hold & Win-style bonus, three in-game jackpots, and an optional gamble round. It is commonly listed with 96% RTP, medium-high volatility, and a maximum win of up to 2,500x the stake."
 slotInfo:

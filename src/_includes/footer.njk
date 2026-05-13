@@ -18,17 +18,23 @@
          {% endfor %}
       </div>
       <div class="flex flex-col lg:flex-row gap-8 lg:gap-0 items-center justify-between">
-         <div class="pt-[65px]">
-            <div class="max-w-md">
-               {% for item in protection %}
-                  {% if item.path.indexOf(page.lang + "-protection") > -1 %}
-                     <img class="protection-logo pointer-events-none" loading="lazy" src="{{ item.path }}" alt="protections logos">
-                  {% endif %}
-               {% endfor %}
-            </div>
-         </div>
-         {% include "lang-selector.njk" %}
+   <div class="pt-[65px]">
+      <div class="footer-protection-small">
+         {% for item in protection %}
+            {% if item.path.indexOf(page.lang + "-protection") > -1 %}
+               <img
+                  class="protection-logo pointer-events-none"
+                  loading="lazy"
+                  src="{{ item.path }}"
+                  alt="protections logos"
+                  style="width: 120px; max-width: 120px; height: auto;"
+               >
+            {% endif %}
+         {% endfor %}
       </div>
+   </div>
+   {% include "lang-selector.njk" %}
+</div>
    </div>
 </footer>
 

@@ -7,99 +7,81 @@ join: "Claim Bonus"
 nav_cta: "Register"
 ---
 
-# Privacy Policy
-
 _Last updated: 23.04.2026_
 
 Using this site means some information about you gets handled along the way. Nothing unusual, but it’s still worth knowing what’s collected and why. This page lays that out in plain terms, along with how that data is treated under laws like GDPR where they apply.
 
 ## 1. General Information
 
-Any time you interact with the site—whether that’s browsing pages or filling in a form—small bits of data are involved. Some of it is technical, some of it depends on what you choose to share.
+Using this site usually means some data is created along the way. Sometimes it is something you type in yourself, like an email address. Other times it is the quiet technical stuff that comes with almost any website visit, such as the device you are using or the pages you open.
 
-There’s also a basic rule here: the site is meant for users 18 and older. No systems are set up to gather data from minors, and if that happens unintentionally, it’s not something that’s kept.
+The site is intended only for people aged 18 or over. It is not designed to collect information from minors. If that kind of data is ever received by mistake, it is not kept once identified.
 
 ## 2. About the Platform
 
-This isn’t a gambling platform itself. It’s more of a reference point—reviews, links, general information about online gaming. If you end up on another site through a link here, that’s a separate service with its own rules.
+This site does not run gambling services. It works more like an information source, with reviews, links, and general material about online gaming. That distinction matters because any website you visit through a link here will have its own privacy rules and its own way of handling data.
 
-For anything collected directly on this site, the responsibility sits here as the data controller.
+For information collected directly on this site, the site operator is responsible as the data controller.
 
 ## 3. Personal Data We Collect
 
-Not much is taken unless you actively provide it. Most of what’s gathered falls into a few basic types:
+Most personal information is not collected unless you choose to provide it. What the site may receive is usually limited to a few ordinary categories:
 
-- **Contact details:** usually just an email if you enter it somewhere
-- **Technical info:** things like your IP address, device type, browser
-- **Usage data:** which pages you visit and how long you stay
-- **Preferences:** whether you’ve agreed to receive updates or not
+- **Contact information:** such as an email address when you enter one
+- **Technical data:** including IP address, browser type, device details, and similar information
+- **Usage information:** such as pages visited, time spent on the site, and basic interaction patterns
+- **Preferences:** for example, whether you agree to receive updates or marketing messages
 
-It’s mostly routine web data—the kind most sites rely on to function properly.
+In practice, this is mostly the kind of data needed to make a website work, understand what people use, and avoid sending things they did not ask for.
 
-## 4. Purpose of Data Processing
+## 4. Why Data Is Used
 
-Data isn’t collected for its own sake. It’s tied to a few practical uses:
+Data is used for practical reasons, not just because it is available. It may help with things like keeping the site stable, answering messages, sending updates when consent has been given, checking how visitors move through the site, and detecting unusual or suspicious activity.
 
-- Keeping the site working as expected
-- Replying if you reach out
-- Sending updates, but only if you’ve opted in
-- Understanding how people use the site
-- Spotting misuse or suspicious activity
-
-In short, it helps maintain the site and keep things running smoothly.
+The point is fairly simple: the site needs some information to function properly, respond when contacted, and keep abuse from slipping through unnoticed.
 
 ## 5. Cookies and Tracking Technologies
 
-Cookies are part of how the site remembers certain things—like preferences or basic activity. They also help measure traffic and performance.
+Cookies help the site remember small details. That might include preferences, session information, or basic activity that helps measure how the site performs.
 
-If you’d rather not use them, you can switch them off in your browser. Just keep in mind that some parts of the site might not behave the same afterward.
+You can block or delete cookies through your browser settings. Some parts of the site may still work normally, but certain features may feel less smooth or may not behave as expected.
 
 ## 6. Third-Party Services
 
-Some features rely on external providers—analytics tools, advertising partners, or affiliate systems. These services may process data separately, based on their own policies.
+Some parts of the site may depend on outside providers. This can include analytics services, advertising networks, affiliate tracking tools, or other technical systems. Those providers may handle certain data under their own privacy policies.
 
-Links on this site can also lead elsewhere. Once you leave, how your data is handled depends on that external site, not this one.
+The same applies to external links. Once you leave this site, the privacy practices of the site you visit are no longer controlled here.
 
 ## 7. Data Sharing
 
-There’s no selling of personal data here. In certain cases, though, limited information may be shared with service providers—mainly to keep the site functional.
+Personal data is not sold. There are still situations where limited information may be shared with service providers, but only where it is needed for a specific function.
 
-That can include:
+That may include analytics tools used to understand site performance, email services used to manage communication, or cases where legal, safety, or security obligations require action.
 
-- Analytics tools tracking performance
-- Email services handling communication
-- Legal or security-related requirements
-
-Nothing beyond what’s necessary for those roles.
+The idea is not open-ended sharing. It is limited to what those services need in order to do their job.
 
 ## 8. International Data Transfers
 
-Some services used behind the scenes may operate outside your country. When that happens, safeguards are put in place so the data is still handled under appropriate standards.
+Some service providers may operate in other countries. When data is handled outside your country, appropriate safeguards are used so the information is still treated with a suitable level of protection.
 
 ## 9. Data Retention
 
-Data isn’t kept indefinitely. It stays only as long as needed for its purpose, unless there’s a legal reason to hold onto it longer. After that, it’s removed or no longer identifiable.
+Information is not kept forever. It remains only for as long as there is a reason to keep it, such as providing a service, maintaining records, dealing with security issues, or meeting legal requirements. Once that reason no longer applies, the data is deleted or changed so it can no longer identify you.
 
 ## 10. Your Rights
 
-Depending on where you’re based, you may have certain rights over your data. These usually include:
+Depending on where you live, you may have rights over your personal data. These may include the right to see what information is held, correct something that is wrong, ask for deletion, limit how data is used, object to certain processing, or withdraw consent where processing depends on consent.
 
-- Accessing what’s stored about you
-- Correcting inaccurate details
-- Asking for deletion
-- Limiting or objecting to processing
-- Withdrawing consent
-
-These rights exist to give you control, not just transparency.
+These rights are there so you are not left guessing about what happens to your information.
 
 ## 11. Data Security
 
-Measures are in place to prevent unauthorized access or misuse. That said, no system is completely immune, so the focus is on reducing risk as much as possible rather than claiming absolute security.
+Reasonable steps are taken to protect data from unauthorized access, loss, misuse, or alteration. No online system can honestly promise perfect protection, so the focus is on reducing risk and handling information carefully.
 
 ## 12. Changes to This Policy
 
-This page may be updated from time to time. When that happens, the date at the top will reflect the latest version.
+This policy may be changed when needed. When updates are made, the date on the page will show the latest version.
 
 ## 13. Contact
 
-If something here isn’t clear or you want to make a request related to your data, you can reach out through the contact options provided on the site.
+Questions about this policy or requests about personal data can be sent through the contact options provided on the site.
