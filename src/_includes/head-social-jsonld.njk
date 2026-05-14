@@ -1,0 +1,25 @@
+{# Requires: pageDescription, pageTitle, pageUrl, shareImageUrl (set by parent template) #}
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ '/sitemap.xml' | absoluteUrl(site.url) }}" />
+
+<meta property="og:title" content="{{ pageTitle | escapeHtml }}" />
+<meta property="og:description" content="{{ pageDescription | escapeHtml }}" />
+<meta property="og:type" content="{{ og_type or 'website' }}" />
+<meta property="og:url" content="{{ pageUrl }}" />
+<meta property="og:image" content="{{ shareImageUrl }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ pageTitle | escapeHtml }}" />
+<meta name="twitter:description" content="{{ pageDescription | escapeHtml }}" />
+<meta name="twitter:image" content="{{ shareImageUrl }}" />
+{% if site.twitter_site %}
+<meta name="twitter:site" content="{{ site.twitter_site | escapeHtml }}" />
+{% endif %}
+
+<script type="application/ld+json">
+{{ {
+  site: site,
+  page: page,
+  title: (title or site.name),
+  meta_description: meta_description,
+  dateModified: getLastModifiedDate(page.inputPath)
+} | pageStructuredData | safe }}
+</script>

@@ -1,9 +1,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{{ title }}</title>
-<meta name="description" content="{{ meta_description }}" />
+{% set pageDescription = meta_description or site.description %}
+{% set pageTitle = title or site.name %}
+{% set pageUrl = page.url | url | absoluteUrl(site.url) %}
+{% set shareImagePath = og_image or social_image or site.og_image %}
+{% set shareImageUrl = shareImagePath | absoluteUrl(site.url) %}
+<title>{{ pageTitle | escapeHtml }}</title>
+<meta name="description" content="{{ pageDescription | escapeHtml }}" />
 <link rel="icon" href="{{ site.favicon }}" sizes="any" />
 <link rel="icon" href="{{ site['favicon-svg'] }}" type="image/svg+xml" />
+<script src="https://analytics.ahrefs.com/analytics.js" data-key="7ntE9jRUUShihmV/o1SlUw" async></script>
 
 {% if tracking.googleTagManager and tracking.googleTagManager.id %}
 <!-- Google Tag Manager -->
@@ -53,21 +59,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {% set defaultHreflang = hreflangsData.default %}
 {% set hreflangs = hreflangsData.languages %}
 
-<link rel="canonical" href="{{ site.url }}" />
+<link rel="canonical" href="{{ pageUrl }}" />
 <link rel="alternate" hreflang="{{ defaultHreflang.lang }}" href="{{ defaultHreflang.url }}" data-rh="true" />
 {% for hreflang in hreflangs %}
 <link rel="alternate" hreflang="{{ hreflang.lang }}" href="{{ hreflang.url }}" data-rh="true" />
 {% endfor %}
 
-<meta property="og:title" content="{{ title }}" />
-<meta property="og:description" content="{{ site.description }}" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="{{ page.url }}" />
-<meta property="og:image" content="{{ site.og_image }}" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="{{ title }}" />
-<meta name="twitter:description" content="{{ site.description }}" />
-<meta name="twitter:image" content="{{ site.twitter_image }}" />
+{% include "head-social-jsonld.njk" %}
 <meta name="date" content="{{ getCurrentDate() }}" scheme="YYYY-MM-DD" />
 <meta name="last-modified" content="{{ getLastModifiedDate(page.inputPath) }}" scheme="YYYY-MM-DD" />
 <meta itemprop="datePublished" content="{{ getCurrentDate() }}" />

@@ -1,6 +1,8 @@
 ---
 layout: ""
-permalink: "{{locale}}/pages/sign-up/index.html"
+permalink: "{{locale}}/sign-up/index.html"
+title: "Kwikky Spin"
+meta_description: "You are being redirected to the official Kwikky Casino registration page."
 ---
 
 <!doctype html>
@@ -8,8 +10,17 @@ permalink: "{{locale}}/pages/sign-up/index.html"
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title></title>
+      <script src="https://analytics.ahrefs.com/analytics.js" data-key="7ntE9jRUUShihmV/o1SlUw" async></script>
+      {% set pageDescription = meta_description or site.description %}
+      {% set pageTitle = title or site.name %}
+      {% set pageUrl = page.url | url | absoluteUrl(site.url) %}
+      {% set shareImagePath = og_image or social_image or site.og_image %}
+      {% set shareImageUrl = shareImagePath | absoluteUrl(site.url) %}
+      <title>{{ pageTitle | escapeHtml }}</title>
+      <meta name="description" content="{{ pageDescription | escapeHtml }}" />
       <meta name="robots" content="noindex" />
+      <link rel="canonical" href="{{ pageUrl }}" />
+      {% include "head-social-jsonld.njk" %}
       <script>
          window.onload = function () {
             const rawAffiliateUrl = "{{ site.affiliate_links.linkEN | trim }}"

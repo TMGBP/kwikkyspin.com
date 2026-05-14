@@ -47,11 +47,11 @@
             },
             {
                "label": "Support",
-               "url": "/{{locale}}/pages/support"
+               "url": "/{{locale}}/support/"
             },
             {
                "label": "Contact Us",
-               "url": "/{{locale}}/pages/contact-us"
+               "url": "/{{locale}}/contact-us/"
             }
          ]
       },

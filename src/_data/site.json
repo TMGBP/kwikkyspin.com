@@ -1,10 +1,15 @@
 {
-   "url": "https://www.kwikkyspin.com/",
+   "url": "https://www.kwikkyspin.com",
+   "name": "Kwikky Spin",
+   "description": "Independent Kwikky Casino review for 2026: bonuses, free spins, games, payments, mobile play and responsible gaming information.",
    "favicon": "/assets/logo.png",
    "favicon-svg": "/assets/logo.png",
    "logo": "/assets/frontlogo.svg",
+   "og_image": "/assets/frontbanner.jpg",
+   "twitter_image": "/assets/frontbanner.jpg",
+   "twitter_site": "@kwikkyspin",
    "langs": ["en"],
    "affiliate_links": {
-      "linkEN": "https://record.babaffiliates.com/_aMOt-RH8u6PUOsjNOfgKeWNd7ZgqdRLk/1"
+      "linkEN": "https://record.babaffiliates.com/_aMOt-RH8u6PUOsjNOfgKeWNd7ZgqdRLk/10/?utm_source=seo&utm_medium=bp&utm_campaign=kwikkyspin.com"
    }
 }

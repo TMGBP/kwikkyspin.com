@@ -1,8 +1,7 @@
 {% if review %}
 <div id="review" class="review-section">
-   <div class="review-content">
-      {% for section in review.sections %}
-         <div class="review-block {% if not loop.last %}review-block-spacing{% endif %}">
+   {% for section in review.sections %}
+      <div class="review-block {% if not loop.last %}review-block-spacing{% endif %}">
             {% if section.heading %}
                {% if section.level == 2 %}
                   <h2 class="review-heading review-heading-lg">{{ section.heading }}</h2>
@@ -27,21 +26,14 @@
                   {% endfor %}
                </ol>
             {% endif %}
-         </div>
-      {% endfor %}
-   </div>
+      </div>
+   {% endfor %}
 </div>
 
 <style>
    .review-section {
       padding-top: 88px;
       padding-bottom: 40px;
-   }
-
-   .review-content {
-      max-width: 880px;
-      margin-left: auto;
-      margin-right: auto;
       color: {{ colors.text.dark }};
    }
 
@@ -105,21 +97,11 @@
       font-weight: 700;
    }
 
-   @media (max-width: 1024px) {
-      .review-content {
-         max-width: 760px;
-      }
-   }
-
    @media (max-width: 768px) {
       .review-section {
          padding-top: 56px;
          padding-left: 20px;
          padding-right: 20px;
-      }
-
-      .review-content {
-         max-width: 100%;
       }
 
       .review-heading-md,

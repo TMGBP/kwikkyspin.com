@@ -2,7 +2,7 @@
 permalink: /robots.txt
 eleventyExcludeFromCollections: true
 ---
-Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: {{ "/sitemap.xml" | absoluteUrl(site.url) }}
 
 User-agent: *
 {%- for page in collections.all %}
